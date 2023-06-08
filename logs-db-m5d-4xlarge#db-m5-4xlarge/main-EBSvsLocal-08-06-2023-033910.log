@@ -1,0 +1,137 @@
+++++++++++++++++++++++++++++++++
+BEGIN TIME
+++++++++++++++++++++++++++++++++
+Thu Jun  8 03:39:10 UTC 2023
+++++++++++++++++++++++++++++++++
+Cleaning up perf stats in RDS instance: db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+SELECT 0
+TRUNCATE TABLE
+++++++++++++++++++++++++++++++++
+Cleaning up perf stats in RDS instance: db-m5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+SELECT 0
+TRUNCATE TABLE
+++++++++++++++++++++++++++++++++
+Dropping indexes
+++++++++++++++++++++++++++++++++
+ERROR:  index "ix_pad_k_c_sbtest1" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
+ERROR:  index "ix_pad_k_c_sbtest2" does not exist
+ERROR:  index "ix_pad_k_c_sbtest7" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
+ERROR:  index "ix_pad_k_c_sbtest13" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+ERROR:  index "ix_pad_k_c_sbtest13" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
+ERROR:  index "ix_pad_k_c_sbtest2" does not exist
+ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
+ERROR:  index "ix_pad_k_c_sbtest10" does not exist
+ERROR:  index "ix_pad_k_c_sbtest10" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest7" does not exist
+ERROR:  index "ix_pad_k_c_sbtest8" does not exist
+ERROR:  index "ix_pad_k_c_sbtest3" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
+ERROR:  index "ix_pad_k_c_sbtest1" does not exist
+ERROR:  index "ix_pad_k_c_sbtest3" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
+ERROR:  index "ix_pad_k_c_sbtest8" does not exist
+++++++++++++++++++++++++++++++++
+Core parameter settings of RDS instance: db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+              name               |       setting       | unit 
+---------------------------------+---------------------+------
+ checkpoint_timeout              | 300                 | s
+ huge_pages                      | on                  | 
+ maintenance_work_mem            | 1053159             | kB
+ max_parallel_workers            | 8                   | 
+ max_parallel_workers_per_gather | 2                   | 
+ max_wal_size                    | 2048                | MB
+ shared_buffers                  | 2007585             | 8kB
+ temp_buffers                    | 1024                | 8kB
+ temp_tablespaces                | rds_temp_tablespace | 
+ wal_compression                 | zstd                | 
+ work_mem                        | 4096                | kB
+(11 rows)
+
+++++++++++++++++++++++++++++++++
+Core parameter settings of RDS instance: db-m5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+              name               | setting | unit 
+---------------------------------+---------+------
+ checkpoint_timeout              | 300     | s
+ huge_pages                      | on      | 
+ maintenance_work_mem            | 1064440 | kB
+ max_parallel_workers            | 8       | 
+ max_parallel_workers_per_gather | 2       | 
+ max_wal_size                    | 2048    | MB
+ shared_buffers                  | 2029089 | 8kB
+ temp_buffers                    | 1024    | 8kB
+ temp_tablespaces                |         | 
+ wal_compression                 | zstd    | 
+ work_mem                        | 4096    | kB
+(11 rows)
+
+++++++++++++++++++++++++++++++++
+Proceeding with benchmarks
+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++
+Running query
+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++
+Running for indexes and temp tables
+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++
+END TIME
+++++++++++++++++++++++++++++++++
+Thu Jun  8 11:09:09 UTC 2023
+++++++++++++++++++++++++++++++++
+All runs are complete, proceed to verify
+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++
+Mean execution times for db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
+++++++++++++++++++++++++++++++++
+ sql_type | concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+----------+-------------+------------------------+---------------------------------------
+ query    |           1 |                    9.1 | 177 GB
+ query    |           2 |                   10.2 | 355 GB
+ query    |           4 |                   15.6 | 709 GB
+ query    |           8 |                   26.0 | 1567 GB
+ query    |          12 |                   39.5 | 2424 GB
+ query    |          16 |                   51.8 | 3244 GB
+(6 rows)
+
+++++++++++++++++++++++++++++++++
+Mean execution times for db-m5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
+++++++++++++++++++++++++++++++++
+ sql_type | concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+----------+-------------+------------------------+---------------------------------------
+ query    |           1 |                    9.7 | 177 GB
+ query    |           2 |                   13.6 | 355 GB
+ query    |           4 |                   24.8 | 709 GB
+ query    |           8 |                   71.2 | 1530 GB
+ query    |          12 |                  122.4 | 2424 GB
+ query    |          16 |                  183.1 | 3281 GB
+(6 rows)
+

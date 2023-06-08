@@ -1,0 +1,334 @@
+Running test with volume of 100000000 records with concurrency of 16 on RDS instances: db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Checking if loading is needed
+psql -h db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com -U masteruser -p 5432 -d postgres 
+Checking for db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+psql: FATAL:  database "sbtest" does not exist
+Records found 
+The number of records specified to load into db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com are 100000000 have NOT matched with number of records in database sbtest:, loading is needed OR database does not exist
+Cleaning up existing database on RDS instance: db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com before proceeding with loading
+ERROR:  database "sbtest" does not exist
+CREATE DATABASE
+You are now connected to database "sbtest" as user "masteruser".
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+Loading data into db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com using sysbench
+psql -h db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com -U masteruser -p 5432 -d postgres 
+Checking for db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+sysbench 1.0.17 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+psql: FATAL:  database "sbtest" does not exist
+Records found 
+The number of records specified to load into db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com are 100000000 have NOT matched with number of records in database sbtest:, loading is needed OR database does not exist
+Cleaning up existing database on RDS instance: db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com before proceeding with loading
+Threads started!
+
+thread prepare13
+Creating table 'sbtest14'...
+thread prepare2
+thread prepare1
+Creating table 'sbtest2'...
+thread prepare0
+Creating table 'sbtest1'...Creating table 'sbtest3'...
+thread prepare3
+Creating table 'sbtest4'...
+thread prepare8
+Creating table 'sbtest9'...
+
+thread prepare7
+Creating table 'sbtest8'...
+thread prepare6
+Creating table 'sbtest7'...
+thread prepare15
+Creating table 'sbtest16'...
+thread prepare4
+Creating table 'sbtest5'...
+thread prepare5
+Creating table 'sbtest6'...
+thread prepare14
+thread prepare11Creating table 'sbtest15'...
+
+Creating table 'sbtest12'...
+thread prepare10
+Creating table 'sbtest11'...
+thread prepare9
+Creating table 'sbtest10'...
+thread prepare12
+Creating table 'sbtest13'...
+ERROR:  database "sbtest" does not exist
+Inserting 100000000 records into 'sbtest6'
+Inserting 100000000 records into 'sbtest2'
+Inserting 100000000 records into 'sbtest4'
+Inserting 100000000 records into 'sbtest3'
+Inserting 100000000 records into 'sbtest8'
+Inserting 100000000 records into 'sbtest1'
+Inserting 100000000 records into 'sbtest9'
+Inserting 100000000 records into 'sbtest14'
+Inserting 100000000 records into 'sbtest10'
+Inserting 100000000 records into 'sbtest16'
+Inserting 100000000 records into 'sbtest13'
+Inserting 100000000 records into 'sbtest15'
+Inserting 100000000 records into 'sbtest12'
+Inserting 100000000 records into 'sbtest5'
+Inserting 100000000 records into 'sbtest11'
+Inserting 100000000 records into 'sbtest7'
+CREATE DATABASE
+You are now connected to database "sbtest" as user "masteruser".
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+Loading data into db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com using sysbench
+sysbench 1.0.17 (using system LuaJIT 2.0.4)
+
+Running the test with following options:
+Number of threads: 16
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+thread prepare1
+Creating table 'sbtest2'...
+thread prepare9
+Creating table 'sbtest10'...
+thread prepare10
+Creating table 'sbtest11'...
+thread prepare8
+Creating table 'sbtest9'...
+thread prepare12
+Creating table 'sbtest13'...
+thread prepare7
+Creating table 'sbtest8'...
+thread prepare15
+Creating table 'sbtest16'...
+thread prepare2
+Creating table 'sbtest3'...
+thread prepare11
+Creating table 'sbtest12'...
+thread prepare0
+Creating table 'sbtest1'...
+thread prepare13
+Creating table 'sbtest14'...
+thread prepare3
+Creating table 'sbtest4'...
+thread prepare6
+Creating table 'sbtest7'...
+thread prepare4
+thread prepare14thread prepare5
+Creating table 'sbtest6'...
+
+Creating table 'sbtest15'...
+Creating table 'sbtest5'...
+Inserting 100000000 records into 'sbtest9'
+Inserting 100000000 records into 'sbtest8'
+Inserting 100000000 records into 'sbtest14'
+Inserting 100000000 records into 'sbtest16'
+Inserting 100000000 records into 'sbtest13'
+Inserting 100000000 records into 'sbtest1'
+Inserting 100000000 records into 'sbtest2'
+Inserting 100000000 records into 'sbtest6'
+Inserting 100000000 records into 'sbtest11'
+Inserting 100000000 records into 'sbtest12'
+Inserting 100000000 records into 'sbtest7'
+Inserting 100000000 records into 'sbtest3'
+Inserting 100000000 records into 'sbtest15'
+Inserting 100000000 records into 'sbtest4'
+Inserting 100000000 records into 'sbtest5'
+Inserting 100000000 records into 'sbtest10'
+Creating secondary indexes on 'sbtest1'...
+Creating secondary indexes on 'sbtest10'...
+Creating secondary indexes on 'sbtest14'...
+Creating secondary indexes on 'sbtest6'...
+Creating secondary indexes on 'sbtest9'...
+Creating secondary indexes on 'sbtest10'...
+Creating secondary indexes on 'sbtest16'...
+Creating table 'sbtest2'...
+FATAL: PQexec() failed: 7 relation "sbtest2" already exists
+FATAL: failed query was: CREATE TABLE sbtest2 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest11'...
+FATAL: PQexec() failed: 7 relation "sbtest11" already exists
+FATAL: failed query was: CREATE TABLE sbtest11 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating secondary indexes on 'sbtest3'...
+Creating secondary indexes on 'sbtest4'...
+Creating secondary indexes on 'sbtest5'...
+Creating secondary indexes on 'sbtest2'...
+Creating secondary indexes on 'sbtest7'...
+Creating secondary indexes on 'sbtest15'...
+Creating table 'sbtest11'...
+FATAL: PQexec() failed: 7 relation "sbtest11" already exists
+FATAL: failed query was: CREATE TABLE sbtest11 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest15'...
+FATAL: PQexec() failed: 7 relation "sbtest15" already exists
+FATAL: failed query was: CREATE TABLE sbtest15 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest7'...
+FATAL: PQexec() failed: 7 relation "sbtest7" already exists
+FATAL: failed query was: CREATE TABLE sbtest7 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest10'...
+FATAL: PQexec() failed: 7 relation "sbtest10" already exists
+FATAL: failed query was: CREATE TABLE sbtest10 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating secondary indexes on 'sbtest9'...
+Creating secondary indexes on 'sbtest13'...
+Creating secondary indexes on 'sbtest14'...
+Creating secondary indexes on 'sbtest12'...
+Creating secondary indexes on 'sbtest11'...
+Creating secondary indexes on 'sbtest16'...
+Creating secondary indexes on 'sbtest6'...
+Creating secondary indexes on 'sbtest8'...
+Creating secondary indexes on 'sbtest4'...
+Creating secondary indexes on 'sbtest11'...
+Creating secondary indexes on 'sbtest3'...
+Creating secondary indexes on 'sbtest8'...
+Creating secondary indexes on 'sbtest5'...
+Creating secondary indexes on 'sbtest1'...
+Creating secondary indexes on 'sbtest15'...
+Creating secondary indexes on 'sbtest12'...
+Creating secondary indexes on 'sbtest2'...
+Creating secondary indexes on 'sbtest7'...
+Creating secondary indexes on 'sbtest13'...
+Creating table 'sbtest6'...
+FATAL: PQexec() failed: 7 relation "sbtest6" already exists
+FATAL: failed query was: CREATE TABLE sbtest6 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest5'...
+FATAL: PQexec() failed: 7 relation "sbtest5" already exists
+FATAL: failed query was: CREATE TABLE sbtest5 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest4'...
+FATAL: PQexec() failed: 7 relation "sbtest4" already exists
+FATAL: failed query was: CREATE TABLE sbtest4 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest5'...
+FATAL: PQexec() failed: 7 relation "sbtest5" already exists
+FATAL: failed query was: CREATE TABLE sbtest5 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest4'...
+FATAL: PQexec() failed: 7 relation "sbtest4" already exists
+FATAL: failed query was: CREATE TABLE sbtest4 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest3'...
+FATAL: PQexec() failed: 7 relation "sbtest3" already exists
+FATAL: failed query was: CREATE TABLE sbtest3 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest9'...
+FATAL: PQexec() failed: 7 relation "sbtest9" already exists
+FATAL: failed query was: CREATE TABLE sbtest9 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed
+Creating table 'sbtest12'...
+FATAL: PQexec() failed: 7 relation "sbtest12" already exists
+FATAL: failed query was: CREATE TABLE sbtest12 (
+id SERIAL NOT NULL,
+k INTEGER DEFAULT '0' NOT NULL,
+c CHAR(120) DEFAULT '' NOT NULL,
+pad CHAR(60) DEFAULT '' NOT NULL,
+PRIMARY KEY (id)
+) 
+FATAL: `thread_run' function failed: /usr/share/sysbench/tests/include/oltp_legacy/common.lua:66: db_query() failed

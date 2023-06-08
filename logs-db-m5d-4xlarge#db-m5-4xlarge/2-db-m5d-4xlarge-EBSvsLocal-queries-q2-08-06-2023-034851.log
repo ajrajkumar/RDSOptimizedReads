@@ -1,0 +1,60 @@
+Running test with concurrency of 2 on RDS instance: db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-08 03:48:51.781004+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686196132.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 2
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 2/2
+latency average = 611682.733 ms
+latency stddev = 361.080 ms
+tps = 0.003268 (including connections establishing)
+tps = 0.003268 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:2
+           end_clock           
+-------------------------------
+ 2023-06-08 03:59:03.885687+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686196744.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+           2 |                   10.2 | 355 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 2 on host db-m5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1
