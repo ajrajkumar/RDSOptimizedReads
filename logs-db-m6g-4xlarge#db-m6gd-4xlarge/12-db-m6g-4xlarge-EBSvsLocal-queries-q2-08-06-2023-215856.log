@@ -1,0 +1,68 @@
+Running test with concurrency of 12 on RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-08 21:58:56.619573+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686261537.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 2700.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 3600.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 4500.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 5400.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 6300.0 s, 0.0 tps, lat 5797968.893 ms stddev 168826.267
+progress: 7200.0 s, 0.0 tps, lat 7178045.312 ms stddev 17066.213
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 12
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 12/12
+latency average = 6626787.507 ms
+latency stddev = 709351.279 ms
+tps = 0.001651 (including connections establishing)
+tps = 0.001651 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:12
+           end_clock           
+-------------------------------
+ 2023-06-09 00:00:03.584916+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686268804.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+          12 |                  110.5 | 2387 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 12 on host db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1

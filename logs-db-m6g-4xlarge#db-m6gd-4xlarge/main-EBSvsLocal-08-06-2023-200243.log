@@ -1,0 +1,101 @@
+++++++++++++++++++++++++++++++++
+BEGIN TIME
+++++++++++++++++++++++++++++++++
+Thu Jun  8 20:02:43 UTC 2023
+++++++++++++++++++++++++++++++++
+Cleaning up perf stats in RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+SELECT 0
+TRUNCATE TABLE
+++++++++++++++++++++++++++++++++
+Cleaning up perf stats in RDS instance: db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+SELECT 0
+TRUNCATE TABLE
+++++++++++++++++++++++++++++++++
+Dropping indexes
+++++++++++++++++++++++++++++++++
+ERROR:  index "ix_pad_k_c_sbtest1" does not exist
+ERROR:  index "ix_pad_k_c_sbtest2" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest8" does not exist
+ERROR:  index "ix_pad_k_c_sbtest3" does not exist
+ERROR:  index "ix_pad_k_c_sbtest7" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest10" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest1" does not exist
+ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
+ERROR:  index "ix_pad_k_c_sbtest13" does not exist
+ERROR:  index "ix_pad_k_c_sbtest3" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
+ERROR:  index "ix_pad_k_c_sbtest7" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest8" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest13" does not exist
+ERROR:  index "ix_pad_k_c_sbtest10" does not exist
+ERROR:  index "ix_pad_k_c_sbtest2" does not exist
+ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+++++++++++++++++++++++++++++++++
+Core parameter settings of RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+              name               | setting | unit 
+---------------------------------+---------+------
+ checkpoint_timeout              | 300     | s
+ huge_pages                      | on      | 
+ maintenance_work_mem            | 1057322 | kB
+ max_parallel_workers            | 8       | 
+ max_parallel_workers_per_gather | 2       | 
+ max_wal_size                    | 2048    | MB
+ shared_buffers                  | 2015520 | 8kB
+ temp_buffers                    | 1024    | 8kB
+ temp_tablespaces                |         | 
+ wal_compression                 | zstd    | 
+ work_mem                        | 4096    | kB
+(11 rows)
+
+++++++++++++++++++++++++++++++++
+Core parameter settings of RDS instance: db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+              name               |       setting       | unit 
+---------------------------------+---------------------+------
+ checkpoint_timeout              | 300                 | s
+ huge_pages                      | on                  | 
+ maintenance_work_mem            | 1057322             | kB
+ max_parallel_workers            | 8                   | 
+ max_parallel_workers_per_gather | 2                   | 
+ max_wal_size                    | 2048                | MB
+ shared_buffers                  | 2015520             | 8kB
+ temp_buffers                    | 1024                | 8kB
+ temp_tablespaces                | rds_temp_tablespace | 
+ wal_compression                 | zstd                | 
+ work_mem                        | 4096                | kB
+(11 rows)
+
+++++++++++++++++++++++++++++++++
+Proceeding with benchmarks
+++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++
+Running query
+++++++++++++++++++++++++++++++++

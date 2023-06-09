@@ -1,0 +1,20 @@
+++++++++++++++++++++++++++++++++
+BEGIN TIME
+++++++++++++++++++++++++++++++++
+Thu Jun  8 13:08:22 UTC 2023
+Running on with concurrency 1 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 1 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 2 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 2 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 4 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 4 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 8 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 8 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 12 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 12 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 16 on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Running on with concurrency 16 on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++
+END TIME
+++++++++++++++++++++++++++++++++
+Thu Jun  8 17:58:10 UTC 2023

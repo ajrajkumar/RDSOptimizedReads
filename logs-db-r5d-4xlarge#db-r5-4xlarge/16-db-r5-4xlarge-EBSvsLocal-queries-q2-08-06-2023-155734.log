@@ -1,0 +1,68 @@
+Running test with concurrency of 16 on RDS instance: db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-08 15:57:34.596763+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686239855.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 2700.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 3600.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 4500.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 5400.1 s, 0.0 tps, lat 4942558.170 ms stddev 4715.169
+progress: 6300.0 s, 0.0 tps, lat 6278354.623 ms stddev 5631.608
+progress: 7200.0 s, 0.0 tps, lat 7081779.422 ms stddev 94931.301
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 16
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 16/16
+latency average = 6498618.806 ms
+latency stddev = 945651.908 ms
+tps = 0.002211 (including connections establishing)
+tps = 0.002211 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:16
+           end_clock           
+-------------------------------
+ 2023-06-08 17:58:10.845865+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686247091.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+          16 |                  108.3 | 3281 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 16 on host db-r5-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1

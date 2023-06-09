@@ -1,0 +1,62 @@
+Running test with concurrency of 12 on RDS instance: db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-08 21:58:56.612243+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686261537.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.1 s, 0.0 tps, lat 1684102.844 ms stddev 748.191
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 12
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 12/12
+latency average = 2267522.885 ms
+latency stddev = 436474.093 ms
+tps = 0.004551 (including connections establishing)
+tps = 0.004551 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:12
+           end_clock           
+-------------------------------
+ 2023-06-08 22:42:53.584562+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686264174.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+          12 |                   37.8 | 2387 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 12 on host db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1

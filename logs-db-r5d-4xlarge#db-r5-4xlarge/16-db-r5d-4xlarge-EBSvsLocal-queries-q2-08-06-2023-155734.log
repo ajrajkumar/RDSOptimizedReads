@@ -1,0 +1,63 @@
+Running test with concurrency of 16 on RDS instance: db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-08 15:57:34.597579+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686239855.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 2700.0 s, 0.0 tps, lat 2129618.215 ms stddev 1247.509
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 16
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 16/16
+latency average = 3130463.847 ms
+latency stddev = 578269.321 ms
+tps = 0.004588 (including connections establishing)
+tps = 0.004588 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:16
+          end_clock           
+------------------------------
+ 2023-06-08 16:55:41.88426+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686243342.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+          16 |                   52.2 | 3281 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 16 on host db-r5d-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1
