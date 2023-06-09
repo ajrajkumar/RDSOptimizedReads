@@ -1,0 +1,63 @@
+Running test with concurrency of 8 on RDS instance: db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-09 05:54:47.276314+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686290087.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 2700.1 s, 0.0 tps, lat 2295161.113 ms stddev 114870.478
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 8
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 8/8
+latency average = 2546269.927 ms
+latency stddev = 264260.357 ms
+tps = 0.002842 (including connections establishing)
+tps = 0.002842 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:8
+           end_clock           
+-------------------------------
+ 2023-06-09 06:41:42.454355+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686292902.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+           8 |                   42.4 | 1567 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 8 on host db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1

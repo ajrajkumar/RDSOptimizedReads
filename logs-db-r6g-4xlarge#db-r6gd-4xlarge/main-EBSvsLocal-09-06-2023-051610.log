@@ -1,9 +1,9 @@
 ++++++++++++++++++++++++++++++++
 BEGIN TIME
 ++++++++++++++++++++++++++++++++
-Thu Jun  8 20:02:43 UTC 2023
+Fri Jun  9 05:16:10 UTC 2023
 ++++++++++++++++++++++++++++++++
-Cleaning up perf stats in RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up perf stats in RDS instance: db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
 ++++++++++++++++++++++++++++++++
  pg_stat_statements_reset 
 --------------------------
@@ -13,7 +13,7 @@ Cleaning up perf stats in RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rd
 SELECT 0
 TRUNCATE TABLE
 ++++++++++++++++++++++++++++++++
-Cleaning up perf stats in RDS instance: db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up perf stats in RDS instance: db-r6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
 ++++++++++++++++++++++++++++++++
  pg_stat_statements_reset 
 --------------------------
@@ -25,50 +25,50 @@ TRUNCATE TABLE
 ++++++++++++++++++++++++++++++++
 Dropping indexes
 ++++++++++++++++++++++++++++++++
-ERROR:  index "ix_pad_k_c_sbtest1" does not exist
-ERROR:  index "ix_pad_k_c_sbtest2" does not exist
-ERROR:  index "ix_pad_k_c_sbtest6" does not exist
-ERROR:  index "ix_pad_k_c_sbtest15" does not exist
-ERROR:  index "ix_pad_k_c_sbtest8" does not exist
 ERROR:  index "ix_pad_k_c_sbtest3" does not exist
 ERROR:  index "ix_pad_k_c_sbtest7" does not exist
-ERROR:  index "ix_pad_k_c_sbtest6" does not exist
-ERROR:  index "ix_pad_k_c_sbtest12" does not exist
-ERROR:  index "ix_pad_k_c_sbtest9" does not exist
-ERROR:  index "ix_pad_k_c_sbtest12" does not exist
-ERROR:  index "ix_pad_k_c_sbtest10" does not exist
-ERROR:  index "ix_pad_k_c_sbtest14" does not exist
-ERROR:  index "ix_pad_k_c_sbtest9" does not exist
-ERROR:  index "ix_pad_k_c_sbtest14" does not exist
-ERROR:  index "ix_pad_k_c_sbtest11" does not exist
-ERROR:  index "ix_pad_k_c_sbtest15" does not exist
 ERROR:  index "ix_pad_k_c_sbtest1" does not exist
 ERROR:  index "ix_pad_k_c_sbtest4" does not exist
-ERROR:  index "ix_pad_k_c_sbtest5" does not exist
-ERROR:  index "ix_pad_k_c_sbtest13" does not exist
-ERROR:  index "ix_pad_k_c_sbtest3" does not exist
-ERROR:  index "ix_pad_k_c_sbtest5" does not exist
-ERROR:  index "ix_pad_k_c_sbtest7" does not exist
-ERROR:  index "ix_pad_k_c_sbtest11" does not exist
-ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest10" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
 ERROR:  index "ix_pad_k_c_sbtest8" does not exist
-ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest8" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
+ERROR:  index "ix_pad_k_c_sbtest12" does not exist
+ERROR:  index "ix_pad_k_c_sbtest7" does not exist
+ERROR:  index "ix_pad_k_c_sbtest2" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
+ERROR:  index "ix_pad_k_c_sbtest3" does not exist
+ERROR:  index "ix_pad_k_c_sbtest14" does not exist
+ERROR:  index "ix_pad_k_c_sbtest5" does not exist
 ERROR:  index "ix_pad_k_c_sbtest13" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+ERROR:  index "ix_pad_k_c_sbtest11" does not exist
 ERROR:  index "ix_pad_k_c_sbtest10" does not exist
 ERROR:  index "ix_pad_k_c_sbtest2" does not exist
-ERROR:  index "ix_pad_k_c_sbtest4" does not exist
+ERROR:  index "ix_pad_k_c_sbtest9" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest6" does not exist
+ERROR:  index "ix_pad_k_c_sbtest16" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest1" does not exist
+ERROR:  index "ix_pad_k_c_sbtest15" does not exist
+ERROR:  index "ix_pad_k_c_sbtest13" does not exist
 ++++++++++++++++++++++++++++++++
-Core parameter settings of RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Core parameter settings of RDS instance: db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
 ++++++++++++++++++++++++++++++++
               name               | setting | unit 
 ---------------------------------+---------+------
  checkpoint_timeout              | 300     | s
  huge_pages                      | on      | 
- maintenance_work_mem            | 1057322 | kB
+ maintenance_work_mem            | 2140277 | kB
  max_parallel_workers            | 8       | 
  max_parallel_workers_per_gather | 2       | 
  max_wal_size                    | 2048    | MB
- shared_buffers                  | 2015520 | 8kB
+ shared_buffers                  | 4079904 | 8kB
  temp_buffers                    | 1024    | 8kB
  temp_tablespaces                |         | 
  wal_compression                 | zstd    | 
@@ -76,17 +76,17 @@ Core parameter settings of RDS instance: db-m6g-4xlarge.cysflcdb2ije.us-east-1.r
 (11 rows)
 
 ++++++++++++++++++++++++++++++++
-Core parameter settings of RDS instance: db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Core parameter settings of RDS instance: db-r6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
 ++++++++++++++++++++++++++++++++
               name               |       setting       | unit 
 ---------------------------------+---------------------+------
  checkpoint_timeout              | 300                 | s
  huge_pages                      | on                  | 
- maintenance_work_mem            | 1057322             | kB
+ maintenance_work_mem            | 2140277             | kB
  max_parallel_workers            | 8                   | 
  max_parallel_workers_per_gather | 2                   | 
  max_wal_size                    | 2048                | MB
- shared_buffers                  | 2015520             | 8kB
+ shared_buffers                  | 4079904             | 8kB
  temp_buffers                    | 1024                | 8kB
  temp_tablespaces                | rds_temp_tablespace | 
  wal_compression                 | zstd                | 
@@ -105,33 +105,33 @@ Running for indexes and temp tables
 ++++++++++++++++++++++++++++++++
 END TIME
 ++++++++++++++++++++++++++++++++
-Fri Jun  9 03:17:43 UTC 2023
+Fri Jun  9 09:57:34 UTC 2023
 ++++++++++++++++++++++++++++++++
 All runs are complete, proceed to verify
 ++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++
-Mean execution times for db-m6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
+Mean execution times for db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
 ++++++++++++++++++++++++++++++++
  sql_type | concurrency | time taken in minutes  | total disk usage of temp per SQL type 
 ----------+-------------+------------------------+---------------------------------------
- query    |           1 |                   10.8 | 177 GB
- query    |           2 |                   14.9 | 355 GB
- query    |           4 |                   24.5 | 709 GB
- query    |           8 |                   62.0 | 1493 GB
- query    |          12 |                  110.5 | 2387 GB
- query    |          16 |                  181.7 | 3281 GB
+ query    |           1 |                   10.2 | 177 GB
+ query    |           2 |                   10.7 | 355 GB
+ query    |           4 |                   17.5 | 709 GB
+ query    |           8 |                   42.4 | 1567 GB
+ query    |          12 |                   67.1 | 2387 GB
+ query    |          16 |                  107.1 | 3281 GB
 (6 rows)
 
 ++++++++++++++++++++++++++++++++
-Mean execution times for db-m6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
+Mean execution times for db-r6gd-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com:
 ++++++++++++++++++++++++++++++++
  sql_type | concurrency | time taken in minutes  | total disk usage of temp per SQL type 
 ----------+-------------+------------------------+---------------------------------------
- query    |           1 |                   10.5 | 177 GB
- query    |           2 |                   11.6 | 355 GB
- query    |           4 |                   15.9 | 709 GB
- query    |           8 |                   26.4 | 1567 GB
- query    |          12 |                   37.8 | 2387 GB
- query    |          16 |                   53.1 | 3281 GB
+ query    |           1 |                    9.9 | 177 GB
+ query    |           2 |                   10.9 | 355 GB
+ query    |           4 |                   15.3 | 709 GB
+ query    |           8 |                   24.4 | 1530 GB
+ query    |          12 |                   37.0 | 2387 GB
+ query    |          16 |                   51.6 | 3281 GB
 (6 rows)
 

@@ -1,0 +1,65 @@
+Running test with concurrency of 12 on RDS instance: db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+Cleaning up first
+You are now connected to database "sbtest" as user "masteruser".
+NOTICE:  extension "pg_stat_statements" already exists, skipping
+CREATE EXTENSION
+ pg_stat_statements_reset 
+--------------------------
+ 
+(1 row)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+          begin_clock          
+-------------------------------
+ 2023-06-09 06:41:42.569309+00
+(1 row)
+
+        ?column?         
+-------------------------
+ BEGIN:1686292903.000000
+(1 row)
+
+Proceeding to run queries
+Running query
+progress: 900.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 1800.0 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 2700.1 s, 0.0 tps, lat 0.000 ms stddev 0.000
+progress: 3600.0 s, 0.0 tps, lat 3438576.219 ms stddev 56870.319
+progress: 4500.0 s, 0.0 tps, lat 4402142.756 ms stddev 106444.554
+transaction type: /home/ec2-user/environment/RDSOptimizedReads/q.sql
+scaling factor: 1
+query mode: simple
+number of clients: 12
+number of threads: 1
+number of transactions per client: 1
+number of transactions actually processed: 12/12
+latency average = 4028628.631 ms
+latency stddev = 505569.243 ms
+tps = 0.002658 (including connections establishing)
+tps = 0.002658 (excluding connections establishing)
+Exeuction of queries is complete
+Extracting performance results
+Overall performance of queries on db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com with concurrency:12
+           end_clock           
+-------------------------------
+ 2023-06-09 07:56:58.080208+00
+(1 row)
+
+       ?column?        
+-----------------------
+ END:1686297418.000000
+(1 row)
+
+ concurrency | time taken in minutes  | total disk usage of temp per SQL type 
+-------------+------------------------+---------------------------------------
+          12 |                   67.1 | 2387 GB
+(1 row)
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+ Capturing performance stats for concurrency 12 on host db-r6g-4xlarge.cysflcdb2ije.us-east-1.rds.amazonaws.com
+++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT 0 1
